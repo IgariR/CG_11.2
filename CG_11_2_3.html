@@ -37,9 +37,9 @@
         const vertices = [];
 
         // 配置する範囲
-        const SIZE = 3000;
+        const SIZE = 1500;
         // 配置する個数
-        const LENGTH = 1000;
+        const LENGTH = 500;
 
         for (let i = 0; i < LENGTH; i++) {
           const x = SIZE * (Math.random() - 0.5);
@@ -49,23 +49,7 @@
           vertices.push(x, y, z);
         }
 
-        function createStarField2() {
-        // 頂点情報を格納する配列
-        const vertices2 = [];
-
-        // 配置する範囲
-        const SIZE2 = 1000;
-        // 配置する個数
-        const LENGTH2 = 500;
-
-        for (let i = 0; i < LENGTH2; i++) {
-          const x2 = SIZE2 * (Math.random() - 0.5);
-          const y2 = SIZE2 * (Math.random() - 0.5);
-          const z2 = SIZE2 * (Math.random() - 0.5);
-
-          vertices.push2(x2, y2, z2);
-        }
-
+        
         // 形状データを作成
         const geometry = new THREE.BufferGeometry();
         geometry.setAttribute("position", new THREE.Float32BufferAttribute(vertices, 3));
@@ -75,25 +59,12 @@
           // 一つ一つのサイズ
           size: 10,
           // 色
-          color: 0xffffff,
+          color: 0xff56ff,
         });
 
         // 物体を作成
         const mesh = new THREE.Points(geometry, material);
         scene.add(mesh);
-
-        // マテリアルを作成
-        const material2 = new THREE.PointsMaterial({
-          // 一つ一つのサイズ
-          size: 30,
-          // 色
-          color: 0xff562f,
-        });
-
-        // 物体を作成
-        const mesh2 = new THREE.Points(geometry, material2);
-        scene.add(mesh2);
-      }
 
       tick();
 
