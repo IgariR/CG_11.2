@@ -5,7 +5,7 @@
     <script src="https://unpkg.com/three@0.137.4/examples/js/controls/OrbitControls.js"></script>
   </head>
 <body>
-  <h1>学校の門(第８回と第９回を合わせたやつ)</h1>
+  <h1>学校の門</h1>
   背景を水色に変えた。<br>
   長方形に画像を張り付け、平面にテクスチャーを張った。
  <script>
@@ -52,6 +52,11 @@
         directionalLight3.position.set(-15, 10, -15);
         // シーンに追加
         scene.add(directionalLight3);
+        // 平行光源4
+        var directionalLight4 = new THREE.DirectionalLight(0x888888);
+        directionalLight4.position.set(10, 0, 10);
+        // シーンに追加
+        scene.add(directionalLight4);
 
         // helper
         const gridHelper = new THREE.GridHelper(2,10); // size, step
