@@ -49,6 +49,23 @@
           vertices.push(x, y, z);
         }
 
+        function createStarField2() {
+        // 頂点情報を格納する配列
+        const vertices2 = [];
+
+        // 配置する範囲
+        const SIZE2 = 1000;
+        // 配置する個数
+        const LENGTH2 = 500;
+
+        for (let i = 0; i < LENGTH2; i++) {
+          const x2 = SIZE2 * (Math.random() - 0.5);
+          const y2 = SIZE2 * (Math.random() - 0.5);
+          const z2 = SIZE2 * (Math.random() - 0.5);
+
+          vertices.push2(x2, y2, z2);
+        }
+
         // 形状データを作成
         const geometry = new THREE.BufferGeometry();
         geometry.setAttribute("position", new THREE.Float32BufferAttribute(vertices, 3));
