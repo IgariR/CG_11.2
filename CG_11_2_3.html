@@ -65,8 +65,10 @@
         const mesh = new THREE.Points(geometry, material);
         scene.add(mesh);
       }
+      
+      tick();
 
-      // テクスチャー読み込み
+       // テクスチャー読み込み
         var textureLoader = new THREE.TextureLoader();  
         var texture = textureLoader.load("img/IMG_-3g8d6n.jpg");
         var mat = new THREE.MeshPhongMaterial();
@@ -81,7 +83,7 @@
         scene.add( sphere );
 
       updat();
-      tick();
+
 
       // 毎フレーム時に実行されるループイベントです
       function tick() {
@@ -100,10 +102,18 @@
         renderer.render(scene, camera);
 
         requestAnimationFrame(tick);
-        requestAnimationFrame(update);
+       
+      }
 
-        // 球を回転させる
+      // 毎フレーム時に実行されるループイベントです
+        function update() {
+          // レンダリング
+          renderer.render(scene, camera);
+          requestAnimationFrame(update);
+
+            // 球を回転させる
           sphere.rotation.y += 0.01;
+        }
       }
     </script>
   </head>
