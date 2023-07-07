@@ -61,9 +61,22 @@
           color: 0xffffff,
         });
 
+        // マテリアル2を作成
+        const material2 = new THREE.PointsMaterial({
+          // 一つ一つのサイズ
+          size: 10,
+          // 色
+          color: 0x564441,
+        });
+
         // 物体を作成
         const mesh = new THREE.Points(geometry, material);
         scene.add(mesh);
+      }
+
+      // 物体2を作成
+        const mesh2 = new THREE.Points(geometry, material2);
+        scene.add(mesh2);
       }
 
       tick();
