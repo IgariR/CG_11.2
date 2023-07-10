@@ -123,7 +123,11 @@
         var box3 = new THREE.Mesh(geometry2, material2);
         box3.position.set(-1,0.5,0);
 
-
+         // 円柱を作成
+        var geometry4 = new THREE.CylinderGeometry( 0.2, 0.5, 0.5, 20, 4 );
+        var Cylinder = new THREE.Mesh(geometry4,);
+        Cylinder.position.set(1.5,0,0);
+        scene.add(Cylinder);
 
 
         //窓テクスチャー読み込み
