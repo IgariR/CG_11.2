@@ -89,6 +89,18 @@
  
         var material2 = new THREE.MeshFaceMaterial(materials2); // マテリアルをセット
 
+        //6面分のテクスチャー読み込み2
+        var materials3 = [
+          new THREE.MeshLambertMaterial({map:THREE.ImageUtils.loadTexture("img/kabe.png")}),
+          new THREE.MeshLambertMaterial({map:THREE.ImageUtils.loadTexture("img/kabe.png")}),
+          new THREE.MeshLambertMaterial({map:THREE.ImageUtils.loadTexture("img/kabe.png")}),
+          new THREE.MeshLambertMaterial({map:THREE.ImageUtils.loadTexture("img/kabe.png")}),
+          new THREE.MeshLambertMaterial({map:THREE.ImageUtils.loadTexture("img/kabe.png")}),
+          new THREE.MeshLambertMaterial({map:THREE.ImageUtils.loadTexture("img/kabe.png")}),
+        ];
+ 
+        var material3 = new THREE.MeshFaceMaterial(materials3); // マテリアルをセット
+
         // 平面を作成
         var planeGeometry = new THREE.PlaneGeometry(5,5,5,5);
         var planeMaterial = new THREE.MeshBasicMaterial({color: 0x734e30});
@@ -105,6 +117,13 @@
         var geometry2 = new THREE.BoxGeometry(0.2, 1, 2);
         var box2 = new THREE.Mesh(geometry2, material2);
         box2.position.set(-1.2,0.5,-1.5);
+
+         // 箱3を作成
+        var geometry3 = new THREE.BoxGeometry(2, 1, 0.2);
+        var box3 = new THREE.Mesh(geometry2, material2);
+        box3.position.set(0,0.5,-1);
+
+
 
 
         //窓テクスチャー読み込み
@@ -152,6 +171,7 @@
         all.add(plane);//平面を追加
         all.add(box); // 柱を追加
         all.add(box2); // 柱2を追加
+        all.add(box3);
         all.add(tobira1);//扉１
         //all.add(tobira2);//扉２
         //all.add(tobira3);//扉3
