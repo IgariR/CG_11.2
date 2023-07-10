@@ -50,40 +50,40 @@
         scene.add(axisHelper);
 
         //6面分のテクスチャー読み込み
-        var materials = [
-          new THREE.MeshLambertMaterial({map:THREE.ImageUtils.loadTexture("img/kabe.png")}),
-          new THREE.MeshLambertMaterial({map:THREE.ImageUtils.loadTexture("img/doa.png")}),
-          new THREE.MeshLambertMaterial({map:THREE.ImageUtils.loadTexture("img/kabe.png")}),
-          new THREE.MeshLambertMaterial({map:THREE.ImageUtils.loadTexture("img/kabe.png")}),
-          new THREE.MeshLambertMaterial({map:THREE.ImageUtils.loadTexture("img/kabe.png")}),
-          new THREE.MeshLambertMaterial({map:THREE.ImageUtils.loadTexture("img/kabe.png")}),
-        ];
+        //var materials = [
+         // new THREE.MeshLambertMaterial({map:THREE.ImageUtils.loadTexture("img/kabe.png")}),
+         // new THREE.MeshLambertMaterial({map:THREE.ImageUtils.loadTexture("img/doa.png")}),
+         // new THREE.MeshLambertMaterial({map:THREE.ImageUtils.loadTexture("img/kabe.png")}),
+         // new THREE.MeshLambertMaterial({map:THREE.ImageUtils.loadTexture("img/kabe.png")}),
+         // new THREE.MeshLambertMaterial({map:THREE.ImageUtils.loadTexture("img/kabe.png")}),
+         // new THREE.MeshLambertMaterial({map:THREE.ImageUtils.loadTexture("img/kabe.png")}),
+        //];
  
-        var material = new THREE.MeshFaceMaterial(materials); // マテリアルをセット
+        //var material = new THREE.MeshFaceMaterial(materials); // マテリアルをセット
 
         //6面分のテクスチャー読み込み2
-        var materials2 = [
-          new THREE.MeshLambertMaterial({map:THREE.ImageUtils.loadTexture("img/kabe.png")}),
-          new THREE.MeshLambertMaterial({map:THREE.ImageUtils.loadTexture("img/kabe.png")}),
-          new THREE.MeshLambertMaterial({map:THREE.ImageUtils.loadTexture("img/kabe.png")}),
-          new THREE.MeshLambertMaterial({map:THREE.ImageUtils.loadTexture("img/kabe.png")}),
-          new THREE.MeshLambertMaterial({map:THREE.ImageUtils.loadTexture("img/tokei.png")}),
-          new THREE.MeshLambertMaterial({map:THREE.ImageUtils.loadTexture("img/kabe.png")}),
-        ];
+       // var materials2 = [
+        //  new THREE.MeshLambertMaterial({map:THREE.ImageUtils.loadTexture("img/kabe.png")}),
+       //   new THREE.MeshLambertMaterial({map:THREE.ImageUtils.loadTexture("img/kabe.png")}),
+       //   new THREE.MeshLambertMaterial({map:THREE.ImageUtils.loadTexture("img/kabe.png")}),
+       //   new THREE.MeshLambertMaterial({map:THREE.ImageUtils.loadTexture("img/kabe.png")}),
+        //  new THREE.MeshLambertMaterial({map:THREE.ImageUtils.loadTexture("img/tokei.png")}),
+        //  new THREE.MeshLambertMaterial({map:THREE.ImageUtils.loadTexture("img/kabe.png")}),
+        //];
  
-        var material2 = new THREE.MeshFaceMaterial(materials2); // マテリアルをセット
+        //var material2 = new THREE.MeshFaceMaterial(materials2); // マテリアルをセット
 
         //6面分のテクスチャー読み込み2
-        var materials3 = [
-          new THREE.MeshLambertMaterial({map:THREE.ImageUtils.loadTexture("img/kabe.png")}),
-          new THREE.MeshLambertMaterial({map:THREE.ImageUtils.loadTexture("img/kabe.png")}),
-          new THREE.MeshLambertMaterial({map:THREE.ImageUtils.loadTexture("img/kabe.png")}),
-          new THREE.MeshLambertMaterial({map:THREE.ImageUtils.loadTexture("img/kabe.png")}),
-          new THREE.MeshLambertMaterial({map:THREE.ImageUtils.loadTexture("img/kabe.png")}),
-          new THREE.MeshLambertMaterial({map:THREE.ImageUtils.loadTexture("img/kabe.png")}),
-        ];
+        //var materials3 = [
+        //  new THREE.MeshLambertMaterial({map:THREE.ImageUtils.loadTexture("img/kabe.png")}),
+        //  new THREE.MeshLambertMaterial({map:THREE.ImageUtils.loadTexture("img/kabe.png")}),
+        //  new THREE.MeshLambertMaterial({map:THREE.ImageUtils.loadTexture("img/kabe.png")}),
+         // new THREE.MeshLambertMaterial({map:THREE.ImageUtils.loadTexture("img/kabe.png")}),
+         // new THREE.MeshLambertMaterial({map:THREE.ImageUtils.loadTexture("img/kabe.png")}),
+         // new THREE.MeshLambertMaterial({map:THREE.ImageUtils.loadTexture("img/kabe.png")}),
+       // ];
  
-        var material3 = new THREE.MeshFaceMaterial(materials3); // マテリアルをセット
+      //  var material3 = new THREE.MeshFaceMaterial(materials3); // マテリアルをセット
 
         // 平面を作成
         var planeGeometry = new THREE.PlaneGeometry(5,5,5,5);
@@ -92,21 +92,21 @@
         plane.rotation.set( -Math.PI/2, 0, 0 );
         plane.position.set(0,0,0);
 
-        //var material6 = new THREE.MeshPhongMaterial({ color: 0x808080 });
+        var material6 = new THREE.MeshPhongMaterial({ color: 0x808080 });
 
         // 箱を作成
         var geometry = new THREE.BoxGeometry(2, 1, 0.2);
-        var box = new THREE.Mesh(geometry, material);
+        var box = new THREE.Mesh(geometry, material6);
         box.position.set(0,0.5,-1);
 
          // 箱2を作成
         var geometry2 = new THREE.BoxGeometry(0.2, 1, 2);
-        var box2 = new THREE.Mesh(geometry2, material2);
+        var box2 = new THREE.Mesh(geometry2, material6);
         box2.position.set(1,0.5,0);
 
          // 箱3を作成
         var geometry3 = new THREE.BoxGeometry(2, 1, 0.2);
-        var box3 = new THREE.Mesh(geometry2, material3);
+        var box3 = new THREE.Mesh(geometry2, material6);
         box3.position.set(-1,0.5,0);
 
          // 円柱(屋根)を作成
