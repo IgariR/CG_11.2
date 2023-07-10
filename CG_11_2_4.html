@@ -73,7 +73,7 @@
  
         var material2 = new THREE.MeshFaceMaterial(materials2); // マテリアルをセット
 
-        6面分のテクスチャー読み込み2
+        //6面分のテクスチャー読み込み2
         var materials3 = [
           new THREE.MeshLambertMaterial({map:THREE.ImageUtils.loadTexture("img/kabe.png")}),
           new THREE.MeshLambertMaterial({map:THREE.ImageUtils.loadTexture("img/kabe.png")}),
@@ -92,34 +92,34 @@
         plane.rotation.set( -Math.PI/2, 0, 0 );
         plane.position.set(0,0,0);
 
-        //var material3 = new THREE.MeshPhongMaterial({ color: 0x808080 });
+        //var material6 = new THREE.MeshPhongMaterial({ color: 0x808080 });
 
         // 箱を作成
         var geometry = new THREE.BoxGeometry(2, 1, 0.2);
-        var box = new THREE.Mesh(geometry, materials);
+        var box = new THREE.Mesh(geometry, material);
         box.position.set(0,0.5,-1);
 
          // 箱2を作成
         var geometry2 = new THREE.BoxGeometry(0.2, 1, 2);
-        var box2 = new THREE.Mesh(geometry2, materials2);
+        var box2 = new THREE.Mesh(geometry2, material2);
         box2.position.set(1,0.5,0);
 
          // 箱3を作成
         var geometry3 = new THREE.BoxGeometry(2, 1, 0.2);
-        var box3 = new THREE.Mesh(geometry2, materials3);
+        var box3 = new THREE.Mesh(geometry2, material3);
         box3.position.set(-1,0.5,0);
 
          // 円柱(屋根)を作成
         var geometry4 = new THREE.CylinderGeometry( 0, 1.6, 1, 20,4 );
-         var material = new THREE.MeshPhongMaterial({ color: 0xff0000 });
-        var Cylinder = new THREE.Mesh(geometry4,material);
+         var material4 = new THREE.MeshPhongMaterial({ color: 0xff0000 });
+        var Cylinder = new THREE.Mesh(geometry4,material4);
         Cylinder.position.set(0,1.45,0);
         scene.add(Cylinder);
         
          // 円柱(煙突)を作成
         var geometry5 = new THREE.CylinderGeometry( 0.1, 0.1, 0.3, 20, 4 );
-         var material2 = new THREE.MeshPhongMaterial({ color: 0x8b4513 });
-        var Cylinder2 = new THREE.Mesh(geometry5,material2);
+         var material5 = new THREE.MeshPhongMaterial({ color: 0x8b4513 });
+        var Cylinder2 = new THREE.Mesh(geometry5,material5);
         Cylinder2.position.set(0,1.7,0.5);
         scene.add(Cylinder2);
 
