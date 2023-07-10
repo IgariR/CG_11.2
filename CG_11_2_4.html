@@ -124,14 +124,14 @@
         box3.position.set(-1,0.5,0);
 
          // 円柱を作成
-        var geometry4 = new THREE.CylinderGeometry( 0.2, 0.5, 0.5, 20, 4 );
+        var geometry4 = new THREE.CylinderGeometry( 0, 1.2, 0.6, 20,4 );
          var material = new THREE.MeshPhongMaterial({ color: 0x05965f });
         var Cylinder = new THREE.Mesh(geometry4,material);
         Cylinder.position.set(0,1,0);
         scene.add(Cylinder);
         
          // 円柱を作成
-        var geometry5 = new THREE.CylinderGeometry( 0.2, 0.5, 0.5, 20, 4 );
+        var geometry5 = new THREE.CylinderGeometry( 0.2, 0.2, 0.3, 20, 4 );
          var material2 = new THREE.MeshPhongMaterial({ color: 0x05994f });
         var Cylinder2 = new THREE.Mesh(geometry5,material2);
         Cylinder2.position.set(0.3,1.5,0);
