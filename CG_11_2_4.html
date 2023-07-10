@@ -111,7 +111,7 @@
         // 箱を作成
         var geometry = new THREE.BoxGeometry(2, 1, 0.2);
         var box = new THREE.Mesh(geometry, material);
-        box.position.set(0,0.5,1);
+        box.position.set(1,0.5,1);
 
          // 箱2を作成
         var geometry2 = new THREE.BoxGeometry(0.2, 1, 2);
@@ -142,7 +142,8 @@
         // 板ポリ1を作成
         var geometry = new THREE.PlaneGeometry(2, 1);
         var tobira1 = new THREE.Mesh(geometry, mat1);
-        tobira1.position.set(1,0.8,0.260); //位置を指定
+        tobira1.position.set(1,1,0.260); //位置を指定
+        tobira1.rotation.z = 3.1216;
         scene.add(tobira1);
 
         // 板ポリ2を作成
